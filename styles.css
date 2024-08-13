@@ -61,16 +61,6 @@ main{
     z-index: 3;
 }
 
-/* CAIXA - CONTEÚDO DIREITA */
-
-.boxright{
-    height: 500px;
-    width: 400px;
-    background-color: rgb(77, 77, 77);
-    position: absolute;
-    z-index: 1;
-}
-
 /* CAIXA - CONTEÚDO ESQUERDA */
 
 .boxleft{
@@ -153,4 +143,45 @@ main{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     text-align: center;
+}
+
+/* CAIXA - CONTEÚDO DIREITA */
+
+.boxright{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(77, 77, 77);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+
+.boxright .imagemHiper{
+    height: 60px;
+    width: 50px;
+}
+
+.boxright img{
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+}
+
+.poderestrela{
+    display: flex;
+    flex-direction: row;
+}
+
+.boxright .esquerda, .boxright .direita{
+    height: 100%;
+    width: 50%;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
