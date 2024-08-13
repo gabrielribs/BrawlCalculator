@@ -1,6 +1,12 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 20px;
+    font-family: "Lilita One", sans-serif;
 }
 
 main{
@@ -12,6 +18,8 @@ main{
     align-items: center;
     flex-direction: column;
 }
+
+/* NAV */
 
 .nav{
     width: 400px;
@@ -34,44 +42,13 @@ main{
     border-radius: 15px 15px 0px 0px;
 }
 
+/* CAIXA */
+
 .box{
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.boxright{
-    height: 500px;
-    width: 400px;
-    background-color: rgb(77, 77, 77);
-    position: absolute;
-    z-index: 1;
-}
-
-.boxleft{
-    height: 500px;
-    width: 400px;
-    background-color: rgb(110, 110, 110);
-    position: absolute;
-    z-index: 2;
-    box-shadow: 5px 0px 10px #30303056;
-}
-
-.superior{
-    height: 50%;
-    width: 100%;
-}
-
-.upgrade, .atual p {
-    width: 100px;
-    height: 20px;
-    background-color: aliceblue;
-}
-
-.inferior{
-    height: 50%;
-    width: 100%;
 }
 
 .abalateral{
@@ -82,4 +59,96 @@ main{
     align-self: flex-start;
     margin-left: 440px;
     z-index: 3;
+}
+
+/* CAIXA - CONTEÚDO DIREITA */
+
+.boxright{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(77, 77, 77);
+    position: absolute;
+    z-index: 1;
+}
+
+/* CAIXA - CONTEÚDO ESQUERDA */
+
+.boxleft{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(110, 110, 110);
+    position: absolute;
+    z-index: 2;
+    box-shadow: 5px 0px 10px #30303056;
+}
+
+.boxleft img{
+    height: 30px;
+    width: 30px;
+}
+
+.boxleft button{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+/* CAIXA - CONTEÚDO ESQUERDA - SUPERIOR */
+
+.superior{ 
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;    
+}
+
+.upgrade, .atual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upgradeComp, .atualComp {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.upgradeComp p, .atualComp p{
+    width: 120px;
+    height: 25px;
+    margin: 0 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* CAIXA - CONTEÚDO ESQUERDA - INFERIOR */
+
+.inferior{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pp, .gold{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gold, #pp{
+    width: 120px;
+    height: 25px;
+    margin: 10px 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
