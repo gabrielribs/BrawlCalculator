@@ -125,6 +125,7 @@ main{
     margin: 0 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+    text-align: center;
 }
 
 /* CAIXA - CONTEÚDO ESQUERDA - INFERIOR */
@@ -145,10 +146,11 @@ main{
     justify-content: center;
 }
 
-#gold, #pp{
+#goldtxt, #pptxt{
     width: 120px;
     height: 25px;
     margin: 10px 0;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+    text-align: center;
 }
