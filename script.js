@@ -107,3 +107,37 @@ function calcularMap(){
     gold.innerHTML = goldnum;
     pp.innerHTML = ppnum;
 }
+
+// ATIVAR E DESATIVAR BOTOES
+
+const botoesmap = new Map([
+    ['1', 5000],
+    ['2', 1500],
+    ['3', 2000],
+    ['4', 1000],
+    ['5', 1000],
+    ['6', 1000],
+    ['7', 1000],
+    ['8', 1000],
+    ['9', 1000],
+    ['10', 2000],
+    ['11', 2000],
+    ['12', 1000],
+    ['13', 1000]
+]);
+
+const botoes = document.querySelectorAll('.botao');
+botoes.forEach(teste => {
+    teste.addEventListener('click', function(){
+        const ativo = teste.classList.toggle('active');
+        const id = teste.getAttribute('data-id');
+        let goldnum = 0;
+        if(ativo){
+            goldnum = botoesmap.get(id);
+            gold.innerHTML  = parseInt(gold.innerHTML) + goldnum;
+        }else{
+            goldnum = botoesmap.get(id);
+            gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
+        }
+    })
+})
