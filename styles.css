@@ -59,6 +59,7 @@ main{
     align-self: flex-start;
     margin-left: 440px;
     z-index: 3;
+    cursor: pointer;
 }
 
 /* CAIXA - CONTEÚDO ESQUERDA */
@@ -191,4 +192,9 @@ main{
     display: flex;
     border: none;
     background: transparent;
+    filter: brightness(0.5);
+}
+
+.boxright button.active{
+    filter: brightness(1);
 }

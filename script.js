@@ -127,14 +127,15 @@ const botoesmap = new Map([
 ]);
 
 const botoes = document.querySelectorAll('.botao');
-botoes.forEach(teste => {
-    teste.addEventListener('click', function(){
-        const ativo = teste.classList.toggle('active');
-        const id = teste.getAttribute('data-id');
+botoes.forEach(options => {
+    options.addEventListener('click', function(){
+        const ativo = options.classList.toggle('active');
+        const id = options.getAttribute('data-id');
         let goldnum = 0;
         if(ativo){
             goldnum = botoesmap.get(id);
             gold.innerHTML  = parseInt(gold.innerHTML) + goldnum;
+            options.classList.add('.active');
         }else{
             goldnum = botoesmap.get(id);
             gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
