@@ -32,6 +32,8 @@ var upgrade = document.getElementById('upgradetxt');
 const max = 11;
 const min = 1;
 
+// MAP DOS ELEMENTOS
+
 const goldmap = new Map([
     [1, 0],
     [2, 20],
@@ -65,6 +67,7 @@ pp.innerHTML = 0;
 atual.innerHTML = 1;
 upgrade.innerHTML = 1;
 
+// FUNÇÕES PARA CLICAR
 function clicarmais(option){
     let limit = parseInt(option.innerHTML);
     if(limit == max - 1){
@@ -85,6 +88,7 @@ function clicarmenos(option){
     calcularMap();
 }
 
+// FUNÇÃO PARA CALCULAR O VALOR COM BASE NO ATUAL E NO UPGRADE
 function calcularMap(){
     let atualint = atual.innerHTML;
     if(atualint == 'max'){
@@ -104,11 +108,22 @@ function calcularMap(){
         goldnum = goldmap.get(upgradeint) - goldmap.get(atualint);
         ppnum = ppmap.get(upgradeint) - ppmap.get(atualint);
     }
-    gold.innerHTML = goldnum;
-    pp.innerHTML = ppnum;
+    gold.innerHTML = goldnum + valorAcessorios();
+    pp.innerHTML = ppnum + valorAcessorios();
 }
 
-// ATIVAR E DESATIVAR BOTOES
+function valorAcessorios(){
+    let valor = 0;
+    const botoes = document.querySelectorAll(".botao.active")
+    botoes.forEach( botao => {
+        const id = botao.getAttribute('data-id')
+        valor += botoesmap.get(id);
+    });
+    console.log(valor)
+    return valor;
+}
+
+// ATIVAR E DESATIVAR ACESSÓRIOS
 
 const botoesmap = new Map([
     ['1', 5000],
