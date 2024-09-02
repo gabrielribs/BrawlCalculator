@@ -26,6 +26,7 @@ main{
     height: 40px;
     display: flex;
     z-index: 3;
+    margin-bottom: 540px;
 }
 
 .nav div:first-child{
@@ -33,6 +34,7 @@ main{
     width: 100px;
     height: 40px;
     border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
 }
 
 .nav div:last-child{
@@ -40,15 +42,21 @@ main{
     width: 100px;
     height: 40px;
     border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
 }
 
-/* CAIXA */
+/* CAIXAS */
 
-.box{
+.box, .boxDrop{
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+}
+
+.boxDrop{
+    visibility: hidden;
 }
 
 .abalateral{
@@ -76,6 +84,7 @@ main{
 .boxleft img{
     height: 30px;
     width: 30px;
+    cursor: pointer;
 }
 
 .boxleft button{
@@ -198,3 +207,5 @@ main{
 .boxright button.active{
     filter: brightness(1);
 }
+
+/* CAIXA - CONTEÚDO DIREITA */

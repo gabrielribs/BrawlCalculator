@@ -1,26 +1,21 @@
 // ABRIR E FECHAR
 
-let verific = false;
-
-document.getElementById('abrir').addEventListener('click', function(){ 
-    if(verific == false){
-        document.querySelector('.boxleft').style.transform = 'translateX(-200px)';
-        document.querySelector('.nav').style.transform = 'translateX(-200px)';
-        document.querySelector('.boxright').style.transform = 'translateX(200px)';
-        document.querySelector('.abalateral').style.transform = 'translateX(200px)';
-        verific = true;
-    }else if(verific == true){
-        document.querySelector('.boxleft').style.transform = 'translateX(0px)';
-        document.querySelector('.nav').style.transform = 'translateX(0px)';
-        document.querySelector('.boxright').style.transform = 'translateX(0px)';
-        document.querySelector('.abalateral').style.transform = 'translateX(0px)';
-        verific = false;
-    }
-    document.querySelector('.boxleft').style.transition = '1s ease';
-    document.querySelector('.nav').style.transition = '1s ease';
-    document.querySelector('.boxright').style.transition = '1s ease';
-    document.querySelector('.abalateral').style.transition = '1s ease';
-});
+let verific = true;
+document.querySelectorAll('.abalateral').forEach(teste =>{
+    teste.addEventListener('click', function(){ 
+        const abrirDir = verific ? 'translateX(-200px)' : 'translateX(0px)';
+        const abrirEsq = verific ? 'translateX(200px)' : 'translateX(0px)';
+        document.querySelectorAll('.boxleft, .nav').forEach(item =>{
+            item.style.transform = abrirDir;
+            item.style.transition = '1s ease';
+        });
+        document.querySelectorAll('.boxright, .abalateral').forEach(item =>{
+            item.style.transform = abrirEsq;
+            item.style.transition = '1s ease';
+        });
+        verific = !verific;
+    });
+})
 
 // CALCULADORA
 
@@ -68,27 +63,29 @@ atual.innerHTML = 1;
 upgrade.innerHTML = 1;
 
 // FUNÇÕES PARA CLICAR
+
 function clicarmais(option){
-    let limit = parseInt(option.innerHTML);
-    if(limit == max - 1){
+    let limite = parseInt(option.innerHTML);
+    if(limite == max - 1){
         option.innerHTML = 'max';
-    }else if(limit < max){
-        option.innerHTML = limit + 1;
+    }else if(limite < max){
+        option.innerHTML = limite + 1;
     }
     calcularMap();
 }
 
 function clicarmenos(option){
-    let limit = parseInt(option.innerHTML);
+    let limite = parseInt(option.innerHTML);
     if(option.innerHTML == 'max'){
         option.innerHTML = max - 1;
-    }else if(limit > min){
-        option.innerHTML = limit - 1;
+    }else if(limite > min){
+        option.innerHTML = limite - 1;
     }
     calcularMap();
 }
 
 // FUNÇÃO PARA CALCULAR O VALOR COM BASE NO ATUAL E NO UPGRADE
+
 function calcularMap(){
     let atualint = atual.innerHTML;
     if(atualint == 'max'){
@@ -155,5 +152,5 @@ botoes.forEach(options => {
             goldnum = botoesmap.get(id);
             gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
         }
-    })
-})
+    });
+});
