@@ -1,3 +1,26 @@
+// MUDAR ABA PÁGINA
+
+const boxDrop = document.querySelector('.boxDrop');
+const box = document.querySelector('.box');
+const nav = document.querySelectorAll('.nav div');
+
+document.querySelectorAll('.page').forEach(teste => {
+    teste.addEventListener('click', function(){
+        const escolha = teste.getAttribute('data-id')
+        if(escolha == '1'){
+            boxDrop.style.visibility = 'hidden'
+            box.style.visibility = 'visible'
+            nav[0].style.backgroundColor = 'rgb(110, 110, 110)';
+            nav[1].style.backgroundColor = 'rgb(77, 77, 77)';
+        }else if(escolha == '2'){
+            boxDrop.style.visibility = 'visible'
+            box.style.visibility = 'hidden'
+            nav[0].style.backgroundColor = 'rgb(77, 77, 77)';
+            nav[1].style.backgroundColor = 'rgb(110, 110, 110)';
+        }
+    });
+});
+
 // ABRIR E FECHAR
 
 let verific = true;
@@ -15,7 +38,7 @@ document.querySelectorAll('.abalateral').forEach(teste =>{
         });
         verific = !verific;
     });
-})
+});
 
 // CALCULADORA
 
