@@ -47,7 +47,7 @@ main{
 
 /* CAIXAS */
 
-.box, .boxDrop{
+.boxCalc, .boxDrop{
     height: 500px;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@ main{
 }
 
 .boxDrop{
-    visibility: hidden;
+    display: none;
 }
 
 .abalateral{
@@ -70,9 +70,9 @@ main{
     cursor: pointer;
 }
 
-/* CAIXA - CONTEÚDO ESQUERDA */
+/* CALC - CONTEÚDO ESQUERDA */
 
-.boxleft{
+.boxLeft{
     height: 500px;
     width: 400px;
     background-color: rgb(110, 110, 110);
@@ -81,20 +81,20 @@ main{
     box-shadow: 5px 0px 10px #30303056;
 }
 
-.boxleft img{
+.boxLeft img{
     height: 30px;
     width: 30px;
     cursor: pointer;
 }
 
-.boxleft button{
+.boxLeft button{
     display: flex;
     background-color: transparent;
     border: none;
     border-radius: 50%;
 }
 
-/* CAIXA - CONTEÚDO ESQUERDA - SUPERIOR */
+/* CALC - CONTEÚDO ESQUERDA - SUPERIOR */
 
 .superior{ 
     height: 50%;
@@ -128,7 +128,7 @@ main{
     text-align: center;
 }
 
-/* CAIXA - CONTEÚDO ESQUERDA - INFERIOR */
+/* CALC - CONTEÚDO ESQUERDA - INFERIOR */
 
 .inferior{
     height: 50%;
@@ -155,9 +155,9 @@ main{
     text-align: center;
 }
 
-/* CAIXA - CONTEÚDO DIREITA */
+/* CALC - CONTEÚDO DIREITA */
 
-.boxright{
+.boxRight{
     height: 500px;
     width: 400px;
     background-color: rgb(77, 77, 77);
@@ -169,12 +169,12 @@ main{
     text-align: center;
 }
 
-.boxright .imagemHiper{
+.boxRight .imagemHiper{
     height: 60px;
     width: 50px;
 }
 
-.boxright img{
+.boxRight img{
     height: 60px;
     width: 60px;
     margin: 0 5px;
@@ -186,7 +186,7 @@ main{
     flex-direction: row;
 }
 
-.boxright .esquerda, .boxright .direita{
+.boxRight .esquerda, .boxRight .direita{
     height: 100%;
     width: 50%;
 }
@@ -197,13 +197,56 @@ main{
     margin: 10px 0;
 }
 
-.boxright button{
+.boxRight button{
     display: flex;
     border: none;
     background: transparent;
     filter: brightness(0.5);
 }
 
-.boxright button.active{
+.boxRight button.active{
     filter: brightness(1);
+}
+
+
+
+.drops{
+    height: 20%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toma1{
+    background-image: url("assets/backgroundDropVerde.jpeg"); 
+    filter: brightness(0.5);
+}
+
+#toma2{
+    background-image: url("assets/backgroundDropAzul.jpeg"); 
+    filter: brightness(0.5);
+
+}
+
+#toma3{
+    background-image: url("assets/backgroundDropRoxo.jpeg"); 
+    filter: brightness(0.5);
+
+}
+
+#toma4{
+    background-image: url("assets/backgroundDropVermelho.jpeg"); 
+    filter: brightness(0.5);
+
+}
+
+#toma5{
+    background-image: url("assets/backgroundDropAmarelo.jpeg"); 
+}
+
+.drops img{
+    height: 70px;
+    width: 70px;
 }

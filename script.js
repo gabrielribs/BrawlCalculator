@@ -1,20 +1,20 @@
 // MUDAR ABA PÁGINA
 
 const boxDrop = document.querySelector('.boxDrop');
-const box = document.querySelector('.box');
+const boxCalc = document.querySelector('.boxCalc');
 const nav = document.querySelectorAll('.nav div');
 
-document.querySelectorAll('.page').forEach(teste => {
-    teste.addEventListener('click', function(){
-        const escolha = teste.getAttribute('data-id')
+document.querySelectorAll('.page').forEach( page => {
+    page.addEventListener('click', function(){
+        const escolha = page.getAttribute('data-id')
         if(escolha == '1'){
-            boxDrop.style.visibility = 'hidden'
-            box.style.visibility = 'visible'
+            boxDrop.style.display = 'none';
+            boxCalc.style.display = 'flex';
             nav[0].style.backgroundColor = 'rgb(110, 110, 110)';
             nav[1].style.backgroundColor = 'rgb(77, 77, 77)';
         }else if(escolha == '2'){
-            boxDrop.style.visibility = 'visible'
-            box.style.visibility = 'hidden'
+            boxDrop.style.display = 'flex';
+            boxCalc.style.display = 'none';
             nav[0].style.backgroundColor = 'rgb(77, 77, 77)';
             nav[1].style.backgroundColor = 'rgb(110, 110, 110)';
         }
@@ -24,17 +24,17 @@ document.querySelectorAll('.page').forEach(teste => {
 // ABRIR E FECHAR
 
 let verific = true;
-document.querySelectorAll('.abalateral').forEach(teste =>{
-    teste.addEventListener('click', function(){ 
+document.querySelectorAll('.abalateral').forEach(aba =>{
+    aba.addEventListener('click', function(){ 
         const abrirDir = verific ? 'translateX(-200px)' : 'translateX(0px)';
         const abrirEsq = verific ? 'translateX(200px)' : 'translateX(0px)';
-        document.querySelectorAll('.boxleft, .nav').forEach(item =>{
+        document.querySelectorAll('.boxLeft, .nav').forEach(item =>{
             item.style.transform = abrirDir;
-            item.style.transition = '1s ease';
+            item.style.transition = '0.3s ease-out';
         });
-        document.querySelectorAll('.boxright, .abalateral').forEach(item =>{
+        document.querySelectorAll('.boxRight, .abalateral').forEach(item =>{
             item.style.transform = abrirEsq;
-            item.style.transition = '1s ease';
+            item.style.transition = '0.3s ease-out';
         });
         verific = !verific;
     });
@@ -129,7 +129,7 @@ function calcularMap(){
         ppnum = ppmap.get(upgradeint) - ppmap.get(atualint);
     }
     gold.innerHTML = goldnum + valorAcessorios();
-    pp.innerHTML = ppnum + valorAcessorios();
+    pp.innerHTML = ppnum;
 }
 
 function valorAcessorios(){
