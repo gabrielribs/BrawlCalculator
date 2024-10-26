@@ -59,7 +59,7 @@ main{
     display: none;
 }
 
-.abalateral{
+.abalateralCalc{
     width: 40px;
     height: 100px;
     border-radius: 0px 15px 15px 0px;
@@ -68,6 +68,22 @@ main{
     margin-left: 440px;
     z-index: 3;
     cursor: pointer;
+}
+
+.abalateralDrop{
+    width: 50px;
+    height: 100px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: rgb(77, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lateral{
+    align-self: flex-start;
+    margin-left: 440px; 
 }
 
 /* CALC - CONTEÚDO ESQUERDA */
@@ -208,7 +224,7 @@ main{
     filter: brightness(1);
 }
 
-
+/* DROPS */
 
 .drops{
     height: 20%;
@@ -246,7 +262,7 @@ main{
     background-image: url("assets/backgroundDropAmarelo.jpeg"); 
 }
 
-.drops img{
-    height: 70px;
-    width: 70px;
+.boxDrop img{
+    height: 40px;
+    width: 40px;
 }

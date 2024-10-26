@@ -1,3 +1,21 @@
+// CARREGAR CONTEÚDOS DE CADA DROP
+
+const conteudos = {
+    raro: '<p>Teste 1</p>',
+    superraro: '<p>Teste 2</p>',
+    epico: '<p>Teste 3</p>',
+    mitico: '<p>Teste 4</p>',
+    lendario: '<p>Teste 5</p>'
+}
+
+document.querySelectorAll('.abalateralDrop').forEach( aba => {
+    aba.addEventListener('click', function(){
+        const escolha = aba.getAttribute('id')
+        const boxDrop = document.getElementById('boxLeftDrop')
+        boxDrop.innerHTML = conteudos[escolha];
+    });
+});
+
 // MUDAR ABA PÁGINA
 
 const boxDrop = document.querySelector('.boxDrop');
@@ -24,7 +42,7 @@ document.querySelectorAll('.page').forEach( page => {
 // ABRIR E FECHAR
 
 let verific = true;
-document.querySelectorAll('.abalateral').forEach(aba =>{
+document.querySelectorAll('.abalateralCalc').forEach(aba =>{
     aba.addEventListener('click', function(){ 
         const abrirDir = verific ? 'translateX(-200px)' : 'translateX(0px)';
         const abrirEsq = verific ? 'translateX(200px)' : 'translateX(0px)';
@@ -32,7 +50,7 @@ document.querySelectorAll('.abalateral').forEach(aba =>{
             item.style.transform = abrirDir;
             item.style.transition = '0.3s ease-out';
         });
-        document.querySelectorAll('.boxRight, .abalateral').forEach(item =>{
+        document.querySelectorAll('.boxRight, .abalateralCalc').forEach(item =>{
             item.style.transform = abrirEsq;
             item.style.transition = '0.3s ease-out';
         });
