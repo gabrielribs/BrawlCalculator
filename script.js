@@ -1,11 +1,11 @@
 // CARREGAR CONTEÚDOS DE CADA DROP
 
 const conteudos = {
-    raro: '<p>Teste 1</p>',
-    superraro: '<p>Teste 2</p>',
-    epico: '<p>Teste 3</p>',
-    mitico: '<p>Teste 4</p>',
-    lendario: '<p>Teste 5</p>'
+    raro: '<img src="assets/Drops/Coin.png" alt=""><img src="assets/Drops/PP.png" alt=""><img src="assets/Drops/XpDouble.png" alt=""><img src="assets/Drops/Vales.png" alt="" id="vales"><img src="assets/Drops/Bling.png" alt="">',
+    superraro: '<img src="assets/Drops/Coin.png" alt=""><img src="assets/Drops/PP.png" alt=""><img src="assets/Drops/XpDouble.png" alt=""><img src="assets/Drops/Vales.png" alt="" id="vales"><img src="assets/Drops/Bling.png" alt=""><img src="assets/Drops/CommonPin.png" alt="" class="pin"><img src="assets/Drops/Spray.png" alt="" id="spray">',
+    epico: '<img src="assets/Drops/Coin.png" alt=""><img src="assets/Drops/PP.png" alt=""><img src="assets/Drops/XpDouble.png" alt=""><img src="assets/Drops/CommonPin.png" alt="" class="pin"><img src="assets/Drops/Spray.png" alt="" id="spray"><img src="assets/Drops/RareBrawler.png" alt=""><img src="assets/Drops/RarePin.png" alt="" class="pin"><img src="assets/Drops/RareSkin.png" alt="">',
+    mitico: '<img src="assets/Drops/Coin.png" alt=""><img src="assets/Drops/PP.png" alt=""><img src="assets/Drops/Spray.png" alt="" id="spray"><img src="assets/Drops/RarePin.png" alt="" class="pin"><img src="assets/Drops/RareSkin.png" alt=""><img src="assets/Drops/EpicBrawler.png" alt=""><img src="assets/Drops/MythicBrawler.png" alt=""><img src="assets/Drops/SuperRareBrawler.png" alt=""><img src="assets/Drops/ProfileIcon.png" alt=""><img src="assets/Drops/EpicPin.png" alt="" class="pin"><img src="assets/Acessorios/gadget.png" alt="">',
+    lendario: '<img src="assets/Acessorios/hyper.png" id="hyper" alt=""><img src="assets/Acessorios/starpower.png" alt=""><img src="assets/Drops/EpicBrawler.png" alt=""><img src="assets/Drops/MythicBrawler.png" alt=""><img src="assets/Drops/LegendaryBrawler.png" alt=""><img src="assets/Drops/SuperRareSkin.png" alt=""><img src="assets/Drops/EpicSkin.png" alt="">'
 }
 
 document.querySelectorAll('.abalateralDrop').forEach( aba => {

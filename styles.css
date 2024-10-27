@@ -235,34 +235,34 @@ main{
     align-items: center;
 }
 
-#toma1{
-    background-image: url("assets/backgroundDropVerde.jpeg"); 
-    filter: brightness(0.5);
-}
-
-#toma2{
-    background-image: url("assets/backgroundDropAzul.jpeg"); 
-    filter: brightness(0.5);
-
-}
-
-#toma3{
-    background-image: url("assets/backgroundDropRoxo.jpeg"); 
-    filter: brightness(0.5);
-
-}
-
-#toma4{
-    background-image: url("assets/backgroundDropVermelho.jpeg"); 
-    filter: brightness(0.5);
-
-}
-
-#toma5{
-    background-image: url("assets/backgroundDropAmarelo.jpeg"); 
+#boxLeftDrop{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .boxDrop img{
     height: 40px;
     width: 40px;
+}
+
+.boxDrop #vales{
+    width: 40px;
+    height: 35px;
+}
+
+.boxDrop .pin{
+    width: 40px;
+    height: 30px;
+}
+
+.boxDrop #spray{
+    width: 30px;
+    height: 40px;
+}
+
+.boxDrop #hyper{
+    width: 33px;
+    height: 40px;
 }

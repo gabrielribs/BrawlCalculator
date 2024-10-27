@@ -1,0 +1,52 @@
+Rare: 50% chance
+
+25 PP = 32,60%
+50 Gold = 41,90%
+100 Xp Double = 20,90%
+20 Vale = 2,30%
+20 Bling = 2,30%
+
+Super Rare: 28% chance
+
+50 PP = 33,11%
+100 Gold = 42,38%
+200 Xp Double = 13,25%
+30 Vale = 3,31%
+50 Bling = 3,31%
+Random Common Pin = 3,31%
+Random Spray = 1,32%
+
+Epic: 15% chance
+
+100 PP = 21,05%
+200 Gold = 21,05%
+Random Spray = 15,79%
+Random Common Pin = 15,79%
+400 Xp Double = 10,53%
+Random Rare Pin = 5,26%
+Random Rare Skin = 5,26%
+Random Rare Brawler = 5,26%
+
+Mythic: 5% chance
+
+200 PP = 18,99%
+500 Gold = 9,49%
+Random Rare Skin = 15,82%
+Random Gadget = 15,82%
+Random Rare Pin = 6,33%
+Random Epic Pin = 3,16%
+Random SuperRare Brawler = 9,49%
+Random Epic Brawler = 6,33%
+Random Mythic Brawler = 1,90%
+Random Spray = 6,33%
+Random Profile Picture = 6,33%
+
+Legendary: 2% chance
+
+Random StarPower = 27,17%
+Random HyperCharge = 16,30%
+Random SuperRare Skin = 35,87%
+Random Epic Skin = 2,17%
+Random Epic Brawler = 10,87%
+Random Mythic Brawler = 5,43%
+Random Legendary Brawler = 2,17%
