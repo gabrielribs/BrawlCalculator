@@ -31,15 +31,18 @@ Mythic: 5% chance
 
 200 PP = 18,99%
 500 Gold = 9,49%
+
 Random Rare Skin = 15,82%
-Random Gadget = 15,82%
 Random Rare Pin = 6,33%
 Random Epic Pin = 3,16%
+Random Spray = 6,33%
+Random Profile Picture = 6,33%
+
+Random Gadget = 15,82%
+
 Random SuperRare Brawler = 9,49%
 Random Epic Brawler = 6,33%
 Random Mythic Brawler = 1,90%
-Random Spray = 6,33%
-Random Profile Picture = 6,33%
 
 Legendary: 2% chance
 

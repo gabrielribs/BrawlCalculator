@@ -239,30 +239,135 @@ main{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.boxDrop img{
+#boxLeftDrop .titulo{
+    height: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+#boxLeftDrop .titulo h2{
+    font-size: 35px;
+    margin-top: 18px;
+    color: white;
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+        1.5px -1.5px 0 #000,   
+        -1.5px 1.5px 0 #000,  
+        1.5px 1.5px 0 #000;  
+}
+
+#boxLeftDrop .container{
+    height: 85%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#boxLeftDrop .container .sections{
+    height: 80px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.13);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.329);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sections h2{
+    position: absolute;
+    top: -13px;
+    left: 30px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+        1.5px -1.5px 0 #000,   
+        -1.5px 1.5px 0 #000,  
+        1.5px 1.5px 0 #000;  
+}
+
+#boxLeftDrop .container #visual{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.partes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.baixo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.icon-container .textosup{
+    z-index: 2;
+    color: white;
+}
+
+.icon-container .textosup p{
+    font-size: 14px;
+}
+
+.textoinf, .textosup{
+    z-index: 2;
+    color: white;
+    text-shadow: 
+        -1.5px -1.5px 0 #000, 
+        1.5px -1.5px 0 #000,  
+        -1.5px 1.5px 0 #000, 
+        1.5px 1.5px 0 #000;  
+}
+
+.icon-container .textoinf p{
+    font-size: 17px;
+}
+
+.icon-container img{
     height: 40px;
     width: 40px;
+    position: absolute;
+    top: 10%;
+    z-index: 1;
 }
 
-.boxDrop #vales{
+.icon-container #vales{
     width: 40px;
     height: 35px;
 }
 
-.boxDrop .pin{
+.icon-container .pin{
     width: 40px;
     height: 30px;
 }
 
-.boxDrop #spray{
+.icon-container #spray{
     width: 30px;
     height: 40px;
 }
 
-.boxDrop #hyper{
+.icon-container #hyper{
     width: 33px;
     height: 40px;
 }
