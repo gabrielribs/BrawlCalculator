@@ -226,15 +226,6 @@ main{
 
 /* DROPS */
 
-.drops{
-    height: 20%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #boxLeftDrop{
     display: flex;
     justify-content: space-evenly;
@@ -243,14 +234,13 @@ main{
 }
 
 #boxLeftDrop .titulo{
-    height: 15%;
-    width: 100%;
-    text-align: center;
+    height: 12%;
+    display: flex;
+    align-items: end;
 }
 
 #boxLeftDrop .titulo h2{
     font-size: 35px;
-    margin-top: 18px;
     color: white;
     text-shadow: 
         -1.5px -1.5px 0 #000,  
@@ -260,7 +250,7 @@ main{
 }
 
 #boxLeftDrop .container{
-    height: 85%;
+    height: 88%;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -268,7 +258,7 @@ main{
     align-items: center;
 }
 
-#boxLeftDrop .container .sections{
+.container .sections{
     height: 80px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.13);
@@ -280,7 +270,7 @@ main{
     align-items: center;
 }
 
-.sections h2{
+.container .sections h2{
     position: absolute;
     top: -13px;
     left: 30px;
@@ -293,24 +283,6 @@ main{
         1.5px 1.5px 0 #000;  
 }
 
-#boxLeftDrop .container #visual{
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-}
-
-.partes{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.baixo{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .icon-container{
     height: 50px;
     width: 50px;
@@ -321,15 +293,6 @@ main{
     position: relative;
 }
 
-.icon-container .textosup{
-    z-index: 2;
-    color: white;
-}
-
-.icon-container .textosup p{
-    font-size: 14px;
-}
-
 .textoinf, .textosup{
     z-index: 2;
     color: white;
@@ -338,6 +301,10 @@ main{
         1.5px -1.5px 0 #000,  
         -1.5px 1.5px 0 #000, 
         1.5px 1.5px 0 #000;  
+}
+
+.icon-container .textosup p{
+    font-size: 14px;
 }
 
 .icon-container .textoinf p{
@@ -370,4 +337,32 @@ main{
 .icon-container #hyper{
     width: 33px;
     height: 40px;
+}
+
+/* RARO */
+
+.container #recursoRaro{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MITICO */
+
+.container #visualMitico{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .separar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parteBaixoMitico{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

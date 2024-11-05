@@ -1,5 +1,5 @@
 // CARREGAR CONTEÚDOS DE CADA DROP
-/*
+
 document.querySelectorAll('.abalateralDrop').forEach( aba => {
     aba.addEventListener('click', function(){
         const escolha = aba.getAttribute('id')
@@ -7,7 +7,7 @@ document.querySelectorAll('.abalateralDrop').forEach( aba => {
         boxDrop.innerHTML = conteudos[escolha];
     });
 });
-*/
+
 // MUDAR ABA PÁGINA
 
 const boxDrop = document.querySelector('.boxDrop');
