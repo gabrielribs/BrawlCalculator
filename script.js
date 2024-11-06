@@ -16,19 +16,23 @@ const nav = document.querySelectorAll('.nav div');
 
 let verific = true;
 
-document.querySelectorAll('.page').forEach( page => {
+document.querySelectorAll('.nav div').forEach( page => {
     page.addEventListener('click', function(){
         const escolha = page.getAttribute('data-id')
         if(escolha == '1'){
             boxDrop.style.display = 'none';
             boxCalc.style.display = 'flex';
-            nav[0].style.backgroundColor = 'rgb(110, 110, 110)';
-            nav[1].style.backgroundColor = 'rgb(77, 77, 77)';
+            nav[0].classList.remove("desativo");
+            nav[0].classList.add("ativo");
+            nav[1].classList.remove("ativo");
+            nav[1].classList.add("desativo");
         }else if(escolha == '2'){
             boxDrop.style.display = 'flex';
             boxCalc.style.display = 'none';
-            nav[0].style.backgroundColor = 'rgb(77, 77, 77)';
-            nav[1].style.backgroundColor = 'rgb(110, 110, 110)';
+            nav[0].classList.remove("ativo");
+            nav[0].classList.add("desativo");
+            nav[1].classList.remove("desativo");
+            nav[1].classList.add("ativo");            
         }
         document.querySelectorAll('.nav, #boxLeftCalc, .boxRight, .abalateralCalc').forEach(fechar =>{
             fechar.style.transition = '0s'
@@ -38,11 +42,15 @@ document.querySelectorAll('.page').forEach( page => {
     });
 });
 
+
+
+
 // ABRIR E FECHAR
 
 
 document.querySelectorAll('.abalateralCalc').forEach(aba =>{
     aba.addEventListener('click', function(){ 
+
         const abrirDir = verific ? 'translateX(-200px)' : 'translateX(0px)';
         const abrirEsq = verific ? 'translateX(200px)' : 'translateX(0px)';
         document.querySelectorAll('#boxLeftCalc, .nav').forEach(item =>{
@@ -56,7 +64,6 @@ document.querySelectorAll('.abalateralCalc').forEach(aba =>{
         verific = !verific;
     });
 });
-
 
 // CALCULADORA
 
