@@ -78,7 +78,11 @@ main{
 .boxLeft{
     height: 500px;
     width: 400px;
-    background-color: rgb(110, 110, 110);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.267)),
+        url("assets/image.png");
+    background-size: contain;
+    background-position: center;
     position: absolute;
     z-index: 2;
     box-shadow: 10px 0px 10px -10px #30303056;
@@ -97,10 +101,38 @@ main{
     border-radius: 50%;
 }
 
+.boxCalc p{
+    color: white;
+    text-shadow: 
+        -1.5px -1.5px 0 #000, 
+        1.5px -1.5px 0 #000,  
+        -1.5px 1.5px 0 #000, 
+        1.5px 1.5px 0 #000; 
+}
+
 /* CALC - CONTEÚDO ESQUERDA - SUPERIOR */
 
+.tituloCalc{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloCalc h1{
+    color: white;
+    text-shadow: 
+        -2.5px -2.5px 0 #000, 
+        2.5px -2.5px 0 #000,  
+        -2.5px 2.5px 0 #000, 
+        2.5px 2.5px 0 #000;
+    font-size: 45px;
+    z-index: 2;
+}
+
 .superior{ 
-    height: 50%;
+    height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -109,24 +141,28 @@ main{
 }
 
 .upgrade, .atual{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.upgradeComp, .atualComp {
+.upgradeComp, .atualComp{
     margin: 10px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.upgradeComp p, .atualComp p{
-    width: 120px;
-    height: 25px;
-    margin: 0 20px;
+#atualtxt, #upgradetxt{
+    width: 160px;
+    height: 30px;
     background-color: rgb(255, 255, 255);
+    color: black;
+    text-shadow: none;
+    font-size: 26px;
+    margin: 10px 10px;
     border-radius: 5px;
     text-align: center;
 }
@@ -134,7 +170,7 @@ main{
 /* CALC - CONTEÚDO ESQUERDA - INFERIOR */
 
 .inferior{
-    height: 50%;
+    height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -143,19 +179,34 @@ main{
 }
 
 .pp, .gold{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.inftxt{
+    font-size: 25px;
+}
+
 #goldtxt, #pptxt{
-    width: 120px;
-    height: 25px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
     margin: 10px 0;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    text-align: center;
+}
+
+#goldtxt{
+    background-color: #fdb50c;
+}
+
+#pptxt{
+    background-color: #FF0BCB;
+
 }
 
 /* CALC - CONTEÚDO DIREITA */
