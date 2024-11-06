@@ -1,10 +1,18 @@
 // CARREGAR CONTEÚDOS DE CADA DROP
 
-document.querySelectorAll('.abalateralDrop').forEach( aba => {
-    aba.addEventListener('click', function(){
-        const escolha = aba.getAttribute('id')
-        const boxDrop = document.getElementById('boxLeftDrop')
-        boxDrop.innerHTML = conteudos[escolha];
+const abaDrop = document.querySelectorAll('.lateral div');
+
+abaDrop.forEach(aba => {
+    aba.addEventListener('click', function() {
+        const boxDrop = document.getElementById('boxLeftDrop'); 
+        const escolha = aba.getAttribute('id'); 
+        boxDrop.innerHTML = conteudos[escolha]; 
+        abaDrop.forEach(outraAba => {
+            outraAba.classList.remove('dropAtivo'); 
+            outraAba.classList.add('dropDesativo');
+        });
+        aba.classList.remove('dropDesativo');
+        aba.classList.add('dropAtivo');
     });
 });
 
@@ -16,23 +24,23 @@ const nav = document.querySelectorAll('.nav div');
 
 let verific = true;
 
-document.querySelectorAll('.nav div').forEach( page => {
+nav.forEach( page => {
     page.addEventListener('click', function(){
         const escolha = page.getAttribute('data-id')
         if(escolha == '1'){
             boxDrop.style.display = 'none';
             boxCalc.style.display = 'flex';
-            nav[0].classList.remove("desativo");
-            nav[0].classList.add("ativo");
-            nav[1].classList.remove("ativo");
-            nav[1].classList.add("desativo");
+            nav[0].classList.remove("pageDesativo");
+            nav[0].classList.add("pageAtivo");
+            nav[1].classList.remove("pageAtivo");
+            nav[1].classList.add("pageDesativo");
         }else if(escolha == '2'){
             boxDrop.style.display = 'flex';
             boxCalc.style.display = 'none';
-            nav[0].classList.remove("ativo");
-            nav[0].classList.add("desativo");
-            nav[1].classList.remove("desativo");
-            nav[1].classList.add("ativo");            
+            nav[0].classList.remove("pageAtivo");
+            nav[0].classList.add("pageDesativo");
+            nav[1].classList.remove("pageDesativo");
+            nav[1].classList.add("pageAtivo");            
         }
         document.querySelectorAll('.nav, #boxLeftCalc, .boxRight, .abalateralCalc').forEach(fechar =>{
             fechar.style.transition = '0s'
@@ -42,11 +50,7 @@ document.querySelectorAll('.nav div').forEach( page => {
     });
 });
 
-
-
-
 // ABRIR E FECHAR
-
 
 document.querySelectorAll('.abalateralCalc').forEach(aba =>{
     aba.addEventListener('click', function(){ 

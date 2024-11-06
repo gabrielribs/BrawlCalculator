@@ -28,7 +28,7 @@ main{
     margin-bottom: 540px;
 }
 
-.nav #page1{
+.nav #page1, .nav #page2{
     width: 100px;
     height: 40px;
     border-radius: 15px 15px 0px 0px;
@@ -36,25 +36,17 @@ main{
 
 }
 
-.nav #page2{
-    width: 100px;
-    height: 40px;
-    border-radius: 15px 15px 0px 0px;
-    cursor: pointer;
-}
-
-.ativo {
+.pageAtivo {
     background-color: rgb(110, 110, 110);
     z-index: 3;
     box-shadow: none;
 }
 
-.desativo {
+.pageDesativo {
     background-color: rgb(77, 77, 77);
     z-index: 1;
     box-shadow: inset 0px -10px 10px -10px #30303056;
 }
-
 
 /* CAIXAS */
 
@@ -72,29 +64,13 @@ main{
 }
 
 .abalateralCalc{
-    width: 40px;
+    width: 50px;
     height: 100px;
     border-radius: 0px 15px 15px 0px;
     background-color: rgb(77, 77, 77);
     align-self: flex-start;
     margin-left: 440px;
     cursor: pointer;
-}
-
-.abalateralDrop{
-    width: 50px;
-    height: 100px;
-    border-radius: 0px 15px 15px 0px;
-    background-color: rgb(77, 77, 77);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.lateral{
-    align-self: flex-start;
-    margin-left: 440px; 
 }
 
 /* CALC - CONTEÚDO ESQUERDA */
@@ -237,11 +213,38 @@ main{
 
 /* DROPS */
 
+#raro, #superraro, #epico, #mitico, #lendario{
+    width: 50px;
+    height: 100px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: rgb(77, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lateral{
+    align-self: flex-start;
+    margin-left: 440px; 
+}
+
+.dropAtivo{
+    filter: brightness(1);
+    box-shadow: none;
+}
+
+.dropDesativo{
+    filter: brightness(0.5);
+    box-shadow: inset 15px 0px 10px -10px #30303056;
+}
+
 #boxLeftDrop{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    box-shadow: none;
 }
 
 #boxLeftDrop .titulo{
