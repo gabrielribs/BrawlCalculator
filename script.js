@@ -14,6 +14,8 @@ const boxDrop = document.querySelector('.boxDrop');
 const boxCalc = document.querySelector('.boxCalc');
 const nav = document.querySelectorAll('.nav div');
 
+let verific = true;
+
 document.querySelectorAll('.page').forEach( page => {
     page.addEventListener('click', function(){
         const escolha = page.getAttribute('data-id')
@@ -28,17 +30,22 @@ document.querySelectorAll('.page').forEach( page => {
             nav[0].style.backgroundColor = 'rgb(77, 77, 77)';
             nav[1].style.backgroundColor = 'rgb(110, 110, 110)';
         }
+        document.querySelectorAll('.nav, #boxLeftCalc, .boxRight, .abalateralCalc').forEach(fechar =>{
+            fechar.style.transition = '0s'
+            fechar.style.transform = 'translateX(0px)';
+        });
+        verific = true;
     });
 });
 
 // ABRIR E FECHAR
 
-let verific = true;
+
 document.querySelectorAll('.abalateralCalc').forEach(aba =>{
     aba.addEventListener('click', function(){ 
         const abrirDir = verific ? 'translateX(-200px)' : 'translateX(0px)';
         const abrirEsq = verific ? 'translateX(200px)' : 'translateX(0px)';
-        document.querySelectorAll('.boxLeft, .nav').forEach(item =>{
+        document.querySelectorAll('#boxLeftCalc, .nav').forEach(item =>{
             item.style.transform = abrirDir;
             item.style.transition = '0.3s ease-out';
         });
@@ -49,6 +56,7 @@ document.querySelectorAll('.abalateralCalc').forEach(aba =>{
         verific = !verific;
     });
 });
+
 
 // CALCULADORA
 
