@@ -185,30 +185,34 @@ main{
     flex-direction: column;
     justify-content: center;
     position: relative;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.445);
 }
 
 .top{
     width: 120px;
     display: flex;
-    background-color: #bb902d;
+    background-color: #ce9719;
     position: relative;
     justify-content: end;
     position: absolute;
     top: -18px;
     border-radius: 0 20px 20px 0;
     border: 2px solid black;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.445);
 }
 
 .pp .top{
-    background-color: #b82197;
+    background-color: #ca25a6;
 }
 
 .top img{
     width: 50px;
     height: 50px;
+    border-radius: 525px;
     position: absolute;
     top: -8px;
     left: -16px;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.445);
 }
 
 .inftxt{
@@ -326,6 +330,7 @@ main{
     align-items: center;
     flex-direction: column;
     box-shadow: none;
+    background-image: url("assets/LendarioDrop.png");
 }
 
 #boxLeftDrop .titulo{
