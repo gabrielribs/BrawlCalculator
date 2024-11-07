@@ -5,8 +5,9 @@ const abaDrop = document.querySelectorAll('.lateral div');
 abaDrop.forEach(aba => {
     aba.addEventListener('click', function() {
         const boxDrop = document.getElementById('boxLeftDrop'); 
-        const escolha = aba.getAttribute('id'); 
+        const escolha = aba.getAttribute('id');
         boxDrop.innerHTML = conteudos[escolha]; 
+        boxDrop.style.backgroundImage = `url("assets/${escolha}Drop.png")`; 
         abaDrop.forEach(outraAba => {
             outraAba.classList.remove('dropAtivo'); 
             outraAba.classList.add('dropDesativo');

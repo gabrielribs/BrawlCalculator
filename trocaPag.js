@@ -1,5 +1,5 @@
 const conteudos = {
-    raro: `
+    Raro: `
         <div class="titulo">
             <h2>STARDROP RARO</h2>
         </div>
@@ -38,7 +38,7 @@ const conteudos = {
             </div>    
         </div>
     `,
-    superraro: `
+    SuperRaro: `
         <div class="titulo">
             <h2>STARDROP SUPERRARO</h2>
         </div>
@@ -90,7 +90,7 @@ const conteudos = {
             </div>   
         </div>
     `,
-    epico: `
+    Epico: `
         <div class="titulo">
             <h2>STARDROP ÉPICO</h2>
         </div>
@@ -150,7 +150,7 @@ const conteudos = {
             </div> 
         </div>
     `,
-    mitico: `
+    Mitico: `
         <div class="titulo">
             <h2>STARDROP MÍTICO</h2>
         </div>
@@ -230,7 +230,7 @@ const conteudos = {
             </div>    
         </div>
         `,
-    lendario: `
+    Lendario: `
         <div class="titulo">
             <h2>STARDROP LENDÁRIO</h2>
         </div>
