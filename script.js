@@ -190,25 +190,6 @@ const botoesmap = new Map([
     ['13', 1000]
 ]);
 
-/*
-const botoes = document.querySelectorAll('.botao');
-botoes.forEach(options => {
-    options.addEventListener('click', function(){
-        const ativo = options.classList.toggle('active');
-        const id = options.getAttribute('data-id');
-        let goldnum = 0;
-        if(ativo){
-            goldnum = botoesmap.get(id);
-            gold.innerHTML  = parseInt(gold.innerHTML) + goldnum;
-            options.classList.add('.active');
-        }else{
-            goldnum = botoesmap.get(id);
-            gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
-        }
-    });
-});
-*/
-
 const botoes = document.querySelectorAll('.botao');
 botoes.forEach(option => {
     option.addEventListener('click', function() {
@@ -252,12 +233,3 @@ botoes.forEach(option => {
         }
     });
 });
-
-/*
-let goldnum = botoesmap.get(id);
-if(ativo){
-    gold.innerHTML  = parseInt(gold.innerHTML) + goldnum;
-}else{
-    gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
-}
-*/
