@@ -2,6 +2,7 @@ const conteudos = {
     Raro: `
         <div class="titulo">
             <h2>STARDROP RARO</h2>
+            <p>50% de chance</p>
         </div>
         <div class="container">
             <div class="sections" id="recursoRaro"">
@@ -41,6 +42,7 @@ const conteudos = {
     SuperRaro: `
         <div class="titulo">
             <h2>STARDROP SUPERRARO</h2>
+            <p>28% de chance</p>
         </div>
         <div class="container">
             <div class="sections" id="recursoRaro" style="height: 180px;">
@@ -93,6 +95,7 @@ const conteudos = {
     Epico: `
         <div class="titulo">
             <h2>STARDROP ÉPICO</h2>
+            <p>15% de chance</p>
         </div>
         <div class="container">
             <div class="sections">
@@ -153,6 +156,7 @@ const conteudos = {
     Mitico: `
         <div class="titulo">
             <h2>STARDROP MÍTICO</h2>
+            <p>5% de chance</p>
         </div>
         <div class="container">
             <div class="sections" id="visualMitico">
@@ -233,6 +237,7 @@ const conteudos = {
     Lendario: `
         <div class="titulo">
             <h2>STARDROP LENDÁRIO</h2>
+            <p>2% de chance</p>
         </div>
         <div class="container">
             <div class="sections">

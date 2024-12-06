@@ -7,7 +7,7 @@ abaDrop.forEach(aba => {
         const boxDrop = document.getElementById('boxLeftDrop'); 
         const escolha = aba.getAttribute('id');
         boxDrop.innerHTML = conteudos[escolha]; 
-        boxDrop.style.backgroundImage = `url("assets/${escolha}Drop.png")`; 
+        boxDrop.style.backgroundImage = `url("assets/${escolha}.png")`; 
         abaDrop.forEach(outraAba => {
             outraAba.classList.remove('dropAtivo'); 
             outraAba.classList.add('dropDesativo');
@@ -169,7 +169,6 @@ function valorAcessorios(){
         const id = botao.getAttribute('data-id')
         valor += botoesmap.get(id);
     });
-    console.log(valor)
     return valor;
 }
 
@@ -194,16 +193,61 @@ const botoesmap = new Map([
 const botoes = document.querySelectorAll('.botao');
 botoes.forEach(options => {
     options.addEventListener('click', function(){
-        const ativo = options.classList.toggle('active');
         const id = options.getAttribute('data-id');
-        let goldnum = 0;
-        if(ativo){
-            goldnum = botoesmap.get(id);
-            gold.innerHTML  = parseInt(gold.innerHTML) + goldnum;
-            options.classList.add('.active');
+        const ativo = options.classList.toggle('active');
+        if(id == 2){
+            const botao3 = document.querySelector('.botao[data-id="3"]');
+            if(ativo && ){
+
+            }
+            
+        }else if(id == 3){
+            const botao2 = document.querySelector('.botao[data-id="2"]');
+            botao2.classList.toggle('active')
         }else{
-            goldnum = botoesmap.get(id);
+        }
+    });
+});
+
+
+const botoes = document.querySelectorAll('.botao');
+botoes.forEach(option => {
+    option.addEventListener('click', function() {
+        const id = option.getAttribute('data-id');
+        let goldnum = botoesmap.get(id);
+
+        if (id == 2) {
+            const botao3 = document.querySelector('.botao[data-id="3"]');
+            if (botao3.classList.contains('active')){
+                botao3.classList.remove('active');
+                let gold3num = botoesmap.get(3);
+                gold.innerHTML = parseInt(gold.innerHTML) - gold3num;
+            }
+        } else if (id == 3) {
+            const botao2 = document.querySelector('.botao[data-id="2"]');
+            if (botao2.classList.contains('active')){
+                botao2.classList.remove('active');
+                let gold2num = botoesmap.get(2);
+                gold.innerHTML = parseInt(gold.innerHTML) - gold2num;
+            }
+        }
+
+        const ativo = option.classList.toggle('active');
+
+        if (ativo) {
+            gold.innerHTML = parseInt(gold.innerHTML) + goldnum;
+        } else {
             gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
         }
     });
 });
+
+
+/*
+let goldnum = botoesmap.get(id);
+if(ativo){
+    gold.innerHTML  = parseInt(gold.innerHTML) + goldnum;
+}else{
+    gold.innerHTML = parseInt(gold.innerHTML) - goldnum;
+}
+    */
