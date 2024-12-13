@@ -294,6 +294,10 @@ main{
 
 }
 
+.top img{
+    cursor: default;
+}
+
 /* CALC - CONTEÚDO DIREITA */
 
 .boxRight{
